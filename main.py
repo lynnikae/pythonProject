@@ -20,24 +20,14 @@
 #         print(i)
 
 
-
-
-
-
-
-
-
-
-
 # f = open('1.txt')
 # s = f.readline().split("XXZY")
 # print(len(max(s, key=len)))
 # print(s.index(max(s, key=len)))
 # print(len(s))
-#ИЛИ
+# ИЛИ
 # s = f.readline().replace("XXZY", "XXZ XZY").split()
 # print(len(max(s, key=len)))
-
 
 
 # f = open('2.txt')
@@ -47,8 +37,6 @@
 #     if i.count("A") >= 3 and len(i) > maxx:
 #         maxx = len(i)
 # print(maxx)
-
-
 
 
 # f = open('3.txt')
@@ -87,5 +75,13 @@
 # print(cnt)
 
 
-
-
+f = open("7.txt")
+s = f.readline()
+cnt_kl, lens = 0, []
+for i in range(len(s) - 1):
+    if cnt_kl < 21 and s[i] == "K" and s[i + 1] == "L":
+        cnt_kl += 1
+    if cnt_kl == 21 and s[i] == "K" and s[i + 1] == "L":
+        lens.append(i + 1 - s.index("KL") + 1)
+        s = s.replace("KL", "00", 1)
+print(min(lens))
