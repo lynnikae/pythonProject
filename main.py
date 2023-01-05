@@ -75,13 +75,22 @@
 # print(cnt)
 
 
-f = open("7.txt")
-s = f.readline()
-cnt_kl, lens = 0, []
-for i in range(len(s) - 1):
-    if cnt_kl < 21 and s[i] == "K" and s[i + 1] == "L":
-        cnt_kl += 1
-    if cnt_kl == 21 and s[i] == "K" and s[i + 1] == "L":
-        lens.append(i + 1 - s.index("KL") + 1)
-        s = s.replace("KL", "00", 1)
-print(min(lens))
+# f = open("7.txt")
+# s = f.readline()
+# cnt_kl, lens = 0, []
+# for i in range(len(s) - 1):
+#     if cnt_kl < 21 and s[i] == "K" and s[i + 1] == "L":
+#         cnt_kl += 1
+#     if cnt_kl == 21 and s[i] == "K" and s[i + 1] == "L":
+#         lens.append(i + 1 - s.index("KL") + 1)
+#         s = s.replace("KL", "00", 1)
+# print(min(lens))
+
+
+
+
+
+
+
+
+
